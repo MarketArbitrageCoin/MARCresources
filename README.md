@@ -4,10 +4,11 @@ Use it on your own risk.
 ***
 
 ## VPS installation
+
 ```
 wget -N https://raw.githubusercontent.com/MarketArbitrageCoin/MARCresources/master/marcoin-mn.sh
 bash marcoin-mn.sh
-```MARCoin
+```
 ***
 
 ## Desktop wallet setup
