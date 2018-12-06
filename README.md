@@ -1,5 +1,5 @@
 # Market Arbitrage Coin
-Shell script to install a [MARCoin Masternode]() on a Linux server running Ubuntu 16.04.
+Shell script to install a MARCoin MasterNode on a Linux server running Ubuntu 16.04.
 Use it on your own risk.
 ***
 
