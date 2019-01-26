@@ -6,12 +6,12 @@ CONFIGFOLDER='/root/.marcoin'
 COIN_DAEMON='marcoind'
 COIN_CLI='marcoin-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/MarketArbitrageCoin/MARCcore/releases/download/1.3.1.1seeds/marc-linux-64bit.tar.gz'
+COIN_TGZ='https://github.com/MarketArbitrageCoin/MARCcore/releases/download/1.4.0.1/marc1.4.0.1-ubuntu16.04-64bit.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='marcoin'
 COIN_PORT=44004
 RPC_PORT=44005
-LATEST_VERSION=1030101
+LATEST_VERSION=1040101
 
 
 NODEIP=$(curl -s4 api.ipify.org)
@@ -41,8 +41,8 @@ function update_node() {
     systemctl stop $COIN_NAME.service >/dev/null 2>&1
     $COIN_PATH$COIN_CLI stop >/dev/null 2>&1
     sleep 10 >/dev/null 2>&1
-    rm $COIN_PATH$COIN_DAEMON $COIN_PATH$COIN_CLI >/dev/null 2>&1
-    rm -r $CONFIGFOLDER/{backups,blocks,budget.dat,chainstate,database,db.log,fee_estimates.dat,mncache.dat,mnpayments.dat,peers.dat,sporks,zerocoin} >/dev/null 2>&1
+#    rm $COIN_PATH$COIN_DAEMON $COIN_PATH$COIN_CLI >/dev/null 2>&1
+#    rm -r $CONFIGFOLDER/{backups,blocks,budget.dat,chainstate,database,db.log,fee_estimates.dat,mncache.dat,mnpayments.dat,peers.dat,sporks,zerocoin} >/dev/null 2>&1
     download_node
     #update_config
     configure_systemd
@@ -72,17 +72,10 @@ maxconnections=256
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-addnode=31.131.17.92
-addnode=207.148.123.101
-addnode=45.76.32.30
-addnode=212.237.33.48
-addnode=54.37.75.48
-addnode=108.61.178.208
-addnode=45.76.32.66
-addnode=209.250.255.116
-addnode=165.227.163.120
-addnode=31.220.24.50
-addnode=8.9.36.15
+#addnode=31.131.17.92
+#addnode=207.148.123.101
+#addnode=45.76.32.30
+#addnode=212.237.33.48
 EOF
 }
 
