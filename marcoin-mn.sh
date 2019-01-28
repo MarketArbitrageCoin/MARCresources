@@ -42,7 +42,7 @@ function update_node() {
     $COIN_PATH$COIN_CLI stop >/dev/null 2>&1
     sleep 10 >/dev/null 2>&1
     rm $COIN_PATH$COIN_DAEMON $COIN_PATH$COIN_CLI >/dev/null 2>&1
-#    rm -r $CONFIGFOLDER/{backups,blocks,budget.dat,chainstate,database,db.log,fee_estimates.dat,mncache.dat,mnpayments.dat,peers.dat,sporks,zerocoin} >/dev/null 2>&1
+    rm -r $CONFIGFOLDER/{backups,blocks,budget.dat,chainstate,database,db.log,fee_estimates.dat,mncache.dat,mnpayments.dat,peers.dat,sporks,zerocoin} >/dev/null 2>&1
     download_node
     #update_config
     configure_systemd
@@ -72,10 +72,11 @@ maxconnections=256
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-#addnode=31.131.17.92
-#addnode=207.148.123.101
-#addnode=45.76.32.30
-#addnode=212.237.33.48
+45.76.35.213
+95.179.155.161
+95.179.182.251
+95.179.142.133
+95.179.130.173
 EOF
 }
 
