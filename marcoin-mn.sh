@@ -11,7 +11,7 @@ COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='marcoin'
 COIN_PORT=44004
 RPC_PORT=44005
-LATEST_VERSION=1050101
+LATEST_VERSION=1050001
 
 
 NODEIP=$(curl -s4 api.ipify.org)
