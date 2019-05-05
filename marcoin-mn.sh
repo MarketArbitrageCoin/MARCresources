@@ -6,12 +6,12 @@ CONFIGFOLDER='/root/.marcoin'
 COIN_DAEMON='marcoind'
 COIN_CLI='marcoin-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/MarketArbitrageCoin/MARCcore/releases/download/1.5.0.1/ubuntu-linux-64bit.tar.gz'
+COIN_TGZ='https://github.com/MarketArbitrageCoin/MARCcore/releases/download/1.6.0.1/ubuntu-linux-64bit.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='marcoin'
 COIN_PORT=44004
 RPC_PORT=44005
-LATEST_VERSION=1050001
+LATEST_VERSION=1060001
 
 
 NODEIP=$(curl -s4 api.ipify.org)
